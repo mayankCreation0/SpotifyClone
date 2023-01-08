@@ -9,10 +9,27 @@ import {
   CancelIcon,
   SearchFullContainer
 } from './searchInputStyles';
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
 const SearchInput = () => {
+
   const [value, setValue] = React.useState('');
   const dispatch = useDispatch();
+
+  const {
+    transcript,
+    // listening,
+
+  } = useSpeechRecognition();
+
+
+  const startListeningbtn = () => {
+    SpeechRecognition.startListening();
+    // setTimeout(() => {
+      setValue(transcript) 
+    // }, 1000);
+    console.log(value);
+  };
 
   const handleChange = ({ target }) => {
     setValue(target.value);
@@ -36,6 +53,7 @@ const SearchInput = () => {
             width={24}
             height={24}
             onClick={handleReset}
+            style={{marginRight:'20px'}}
           />
         ) : null}
         <Input
@@ -44,6 +62,7 @@ const SearchInput = () => {
           value={value}
           onChange={handleChange}
         />
+        <button style={{ width: '20px', marginLeft: '-28px', border: 'none',backgroundColor:'transparent' }} onClick={startListeningbtn}><img style={{ width: '20px' }} src='https://cdn-icons-png.flaticon.com/512/3747/3747132.png' alt='mike' /></button>
       </SearchContainer>
     </SearchFullContainer>
   );
