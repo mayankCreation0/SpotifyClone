@@ -17,7 +17,7 @@ import { setList, startSong, pauseSong } from '../Track/trackActions';
 import PlaylistContent from '../../components/Playlist/PlaylistContent';
 import Loader from '../../components/Loader/Loader';
 // hooks
-import useNotifier from '../../hooks/useNotifier';
+// import useNotifier from '../../hooks/useNotifier';
 import useTitle from '../../hooks/useTitle';
 
 const Playlist = () => {
@@ -34,9 +34,9 @@ const Playlist = () => {
   const { id } = useParams(),
     { pathname } = useLocation();
 
-  const { showSnackbar } = useNotifier({
-    message: 'Oooops something went wrong.',
-  });
+  // const { showSnackbar } = useNotifier({
+  //   message: 'Oooops something went wrong.',
+  // });
 
   useTitle(`Spotify - ${playlist.name}`);
 
@@ -101,7 +101,7 @@ const Playlist = () => {
     return <Loader isLoading={loading} />;
   }
 
-  if (!loading && error) showSnackbar();
+  // if (!loading && error) showSnackbar();
 
   return (
     <PlaylistContainer>

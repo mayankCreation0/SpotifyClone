@@ -3,7 +3,7 @@ import useNotifier from './useNotifier';
 function useCopyToClipboard(text = window.location.href) {
   const { showSnackbar } = useNotifier({
     error: false,
-    message: 'Enlace copiado en el portapapeles',
+    message: 'oops something went wrong!!',
   });
   const copyToClipboard = () => {
     if (navigator.clipboard.writeText(text, '')) showSnackbar();
