@@ -10,14 +10,23 @@ const NavbarProfileMenu = ({ open }) => {
     // const url = 'https://accounts.spotify.com/en/logout'
     window.open("https://accounts.spotify.com/en/logout", "_self")
   }
-  // const google = () => {
-  //   window.open("http://localhost:5000/auth/google", "_self");
-  // };
+  const premium = () => {
+    window.open("https://www.spotify.com/us/premium/", "_self");
+  };
+  const Setting = () => {
+    window.open("https://open.spotify.com/preferences", "_self");
+  };
 
   return open ? (
     <ProfileMenuContainer>
       <ProfileMenuLink href="https://open.spotify.com" target="_blank">
         Profile
+      </ProfileMenuLink>
+      <ProfileMenuLink onClick={premium}>
+        Upgrade to Premium
+      </ProfileMenuLink>
+      <ProfileMenuLink onClick={Setting}>
+        Setting
       </ProfileMenuLink>
       <ProfileMenuLink onClick={logout}>
         Logout
