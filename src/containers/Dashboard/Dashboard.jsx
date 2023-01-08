@@ -17,14 +17,10 @@ import {
 } from '../../components/LibraryItem/playlistItemStyles';
 import Loader from '../../components/Loader/Loader';
 import useTitle from '../../hooks/useTitle';
-import useNotifier from '../../hooks/useNotifier';
 
 const Dashboard = () => {
   const dispatch = useDispatch();
 
-  const { showSnackbar } = useNotifier({
-    message: 'Oooops something went wrong.'
-  });
 
   useTitle('Spotify - Clone');
 
@@ -34,7 +30,6 @@ const Dashboard = () => {
       featured,
       releases,
       loading,
-      error
     } = useSelector(({ dashboard }) => dashboard),
     authLoading = useSelector(({ auth }) => auth.loading),
     playlistLoading = useSelector(({ playlists }) => playlists.loading);
@@ -51,7 +46,6 @@ const Dashboard = () => {
   if (loading || authLoading || playlistLoading)
     return <Loader isLoading={loading || authLoading || playlistLoading} />;
 
-  if (!loading && error) showSnackbar();
 
   return (
     <>

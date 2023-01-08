@@ -7,11 +7,11 @@ const Playlists = () => {
   const { list, loading, error } = useSelector(({ playlists }) => playlists),
     { id: userId } = useSelector(({ auth }) => auth.user);
 
-  const { showSnackbar } = useNotifier({
-    message: 'Oooops something went wrong.',
-  });
+  // const { showSnackbar } = useNotifier({
+  //   message: 'Oooops something went wrong.',
+  // });
 
-  if (!loading && error) showSnackbar();
+  // if (!loading && error) showSnackbar();
 
   return (
     <>

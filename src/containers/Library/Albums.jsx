@@ -11,7 +11,7 @@ import {
 } from '../../components/LibraryItem/playlistItemStyles';
 
 // hooks
-import useNotifier from '../../hooks/useNotifier';
+// import useNotifier from '../../hooks/useNotifier';
 import useTitle from '../../hooks/useTitle';
 
 const Albums = () => {
@@ -19,16 +19,16 @@ const Albums = () => {
   useTitle('Spotify - Your Library');
 
   const { albums, loading, error } = useSelector(({ library }) => library);
-  const { showSnackbar } = useNotifier({
-    message: 'Oooops something went wrong.'
-  });
+  // const { showSnackbar } = useNotifier({
+  //   message: 'Oooops something went wrong.'
+  // });
 
   React.useEffect(() => {
     dispatch(getAlbumsStart());
   }, [dispatch]);
 
   if (loading) return <Loader isLoading={loading} />;
-  if (!loading && error) showSnackbar();
+  // if (!loading && error) showSnackbar();
   return (
     <div>
       <SectionTitleContainer>
