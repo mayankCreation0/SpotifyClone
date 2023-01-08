@@ -7,7 +7,8 @@ export const getArtistAlbums = artistId =>
   api(`https://api.spotify.com/v1/artists/${artistId}/albums`);
 
 export const getArtistSongs = artistId =>
-  api(`https://api.spotify.com/v1/artists/${artistId}/top-tracks?country=ES`);
+  api(`https://api.spotify.com/v1/artists/${artistId}/top-tracks?country=IN`);
 
 export const getRelatedArtists = artistId =>
   api(`https://api.spotify.com/v1/artists/${artistId}/related-artists`);
+// https://api.spotify.com/v1/search?type=album&include_external=audio'
