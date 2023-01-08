@@ -17,20 +17,25 @@ import {
 } from '../../components/LibraryItem/playlistItemStyles';
 import Loader from '../../components/Loader/Loader';
 import useTitle from '../../hooks/useTitle';
+// import useNotifier from '../../hooks/useNotifier';
 
 const Dashboard = () => {
   const dispatch = useDispatch();
 
+  // const { showSnackbar } = useNotifier({
+  //   message: 'Oooops something went wrong.'
+  // });
 
   useTitle('Spotify - Clone');
 
   const {
-      played,
-      recommendations,
-      featured,
-      releases,
-      loading,
-    } = useSelector(({ dashboard }) => dashboard),
+    played,
+    recommendations,
+    featured,
+    releases,
+    loading,
+    error
+  } = useSelector(({ dashboard }) => dashboard),
     authLoading = useSelector(({ auth }) => auth.loading),
     playlistLoading = useSelector(({ playlists }) => playlists.loading);
 
@@ -46,6 +51,7 @@ const Dashboard = () => {
   if (loading || authLoading || playlistLoading)
     return <Loader isLoading={loading || authLoading || playlistLoading} />;
 
+  // if (!loading && error) showSnackbar();
 
   return (
     <>
@@ -60,6 +66,39 @@ const Dashboard = () => {
             title={track.name}
             subtitle={track.artists[0].name}
             cover={track.album.images[0].url}
+            type='album'
+            style={{ border: '1px solid red' }}
+          />
+        ))}
+      </LibraryItemsContainer>
+      <SectionTitleContainer>
+        <SectionTitle>Featured Playlists</SectionTitle>
+      </SectionTitleContainer>
+
+      <LibraryItemsContainer>
+        {featured.map(({ id, name, images, owner: { display_name } }, i) => (
+          <LibraryItem
+            key={i}
+            id={id}
+            title={name}
+            subtitle={display_name}
+            cover={images[0].url}
+            type='playlist'
+          />
+        ))}
+      </LibraryItemsContainer>
+      <SectionTitleContainer>
+        <SectionTitle>New Releases</SectionTitle>
+      </SectionTitleContainer>
+
+      <LibraryItemsContainer>
+        {releases.map(({ id, name, images, artists }, i) => (
+          <LibraryItem
+            key={i}
+            id={id}
+            title={name}
+            subtitle={artists[0].name}
+            cover={images[0].url}
             type='album'
           />
         ))}
@@ -95,38 +134,6 @@ const Dashboard = () => {
               type='album'
             />
           ))}
-      </LibraryItemsContainer>
-      <SectionTitleContainer>
-        <SectionTitle>Featured Playlists</SectionTitle>
-      </SectionTitleContainer>
-
-      <LibraryItemsContainer>
-        {featured.map(({ id, name, images, owner: { display_name } }, i) => (
-          <LibraryItem
-            key={i}
-            id={id}
-            title={name}
-            subtitle={display_name}
-            cover={images[0].url}
-            type='playlist'
-          />
-        ))}
-      </LibraryItemsContainer>
-      <SectionTitleContainer>
-        <SectionTitle>New Releases</SectionTitle>
-      </SectionTitleContainer>
-
-      <LibraryItemsContainer>
-        {releases.map(({ id, name, images, artists }, i) => (
-          <LibraryItem
-            key={i}
-            id={id}
-            title={name}
-            subtitle={artists[0].name}
-            cover={images[0].url}
-            type='album'
-          />
-        ))}
       </LibraryItemsContainer>
     </>
   );
