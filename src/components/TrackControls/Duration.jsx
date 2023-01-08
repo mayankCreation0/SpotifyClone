@@ -56,9 +56,9 @@ const Duration = React.forwardRef(
           <ProgressBar
             type='range'
             min='0'
-            max={existSong ? '30' : '0'}
+            max={existSong ? '240' : '0'}
             step='1'
-            maxValue={30}
+            maxValue={240}
             value={parseInt(timeElapsed)}
             onChange={handleChangeRange}
           />
@@ -67,7 +67,7 @@ const Duration = React.forwardRef(
         <ProgressBarTime>
           {moment()
             .minutes(0)
-            .second(existSong ? 30 : 0 - timeElapsed)
+            .second(existSong ? 240 : 0 - timeElapsed)
             .format('m:ss')}
         </ProgressBarTime>
       </DurationContainer>
