@@ -67,7 +67,7 @@ const Duration = React.forwardRef(
         <ProgressBarTime>
           {moment()
             .minutes(0)
-            .second(existSong ? 240 : 0 - timeElapsed)
+            .second(existSong ? 60 : 0 - timeElapsed)
             .format('m:ss')}
         </ProgressBarTime>
       </DurationContainer>
