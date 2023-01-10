@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.js": "/static/js/main.062c0c7c.js",
+    "static/media/spotify.png": "/static/media/spotify.f48fb565509bf23854a8.png",
+    "static/media/speaker.svg": "/static/media/speaker.7aaeb6c69942d69012994750dba3a4be.svg",
+    "static/media/heart-outline.svg": "/static/media/heart-outline.c31d61db7c2d096bd3219a00053eca01.svg",
+    "static/media/speaker-2.svg": "/static/media/speaker-2.cb971135a2eda8be3260d934a432020c.svg",
+    "static/media/speaker-3.svg": "/static/media/speaker-3.ca373797485d98e68c195bde228a28fa.svg",
+    "static/media/music.svg": "/static/media/music.8546a4c7a31394d1f744a5bf34651b98.svg",
+    "static/media/speaker-mute.svg": "/static/media/speaker-mute.92a4e059e07517ceedc7b34ab5307706.svg",
+    "static/media/heart.svg": "/static/media/heart.105f24fc873bd4555222e10fad7af246.svg",
+    "index.html": "/index.html",
+    "static/media/down-arrow.svg": "/static/media/down-arrow.7d01ddefffc46eb5126b3aad5f06b8f1.svg",
+    "static/media/search-strong.svg": "/static/media/search-strong.fbb68eae4736a04c380d4975bc9c842f.svg",
+    "static/media/search.svg": "/static/media/search.2c84170374f58ed6530bd42eff2934e6.svg",
+    "static/media/defaultSong.svg": "/static/media/defaultSong.e469899f63641e43eceb5d8ddc17f569.svg",
+    "static/media/more.svg": "/static/media/more.55c84e36f012e95c19cd1ade380996c3.svg",
+    "static/media/download.svg": "/static/media/download.7f3de4030f47c27be3b5fb958e6174f1.svg",
+    "static/media/home-outline.svg": "/static/media/home-outline.b811af0ef61fa8668ac4979fcbee89a4.svg",
+    "static/media/empty-playlist.svg": "/static/media/empty-playlist.ee2222e405b16074025c2ec7b2f9ed97.svg",
+    "static/media/pause.svg": "/static/media/pause.94b3b03188f8c4e35866ccbdaa44389b.svg",
+    "static/media/library.svg": "/static/media/library.a91475352f5344112e7fb78d37a80e11.svg",
+    "static/media/library-strong.svg": "/static/media/library-strong.2cec19d6072715f93e893c1d8e67d720.svg",
+    "static/media/home-solid.svg": "/static/media/home-solid.5c6f295355da0736299e219ebfeb88c8.svg",
+    "static/media/plus.svg": "/static/media/plus.24bc66447eb11383d2bca7bf069723f8.svg",
+    "static/media/cancel.svg": "/static/media/cancel.01cf3b7f9aa0e3c9fdd1988c872cce0e.svg",
+    "static/media/arrow-left.svg": "/static/media/arrow-left.9d3de968255b86f7c2dc20fbe66b9e9d.svg",
+    "static/media/arrow-right.svg": "/static/media/arrow-right.b85f9980ce308988fe6ef80aa7e86b96.svg",
+    "static/media/play.svg": "/static/media/play.6fc73882275a01692622887abf2961df.svg",
+    "main.062c0c7c.js.map": "/static/js/main.062c0c7c.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.062c0c7c.js"
+  ]
+}
